@@ -12,10 +12,7 @@ function App() {
           Yahoo router redirect
         </Link>
         {" "}|{" "}
-        <Link
-          to={{pathname: "https://google.com/" }}
-          target="_blank"
-        >
+        <Link onClick={external}>
           Google Link
         </Link>
         {" "}|{" "}
@@ -25,6 +22,9 @@ function App() {
   );
 }
 
+const external = () => {
+  window.location.href = "http://google.com/";
+}
 //https://github.com/remix-run/react-router/discussions/8611 
 //solo se debería usar Link cuando queres que sea linkeado adentro de tu app
 
